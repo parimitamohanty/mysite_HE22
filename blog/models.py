@@ -25,20 +25,21 @@ class Post(models.Model):
     status = models.CharField(max_length=10,
                               choices=STATUS_CHOICES,
                               default='draft')
-
-    objects = models.Manager()  # The default manager.
-    published = PublishedManager()  # Our custom manager.
+    created_date = models.DateTimeField(
+        default=timezone.now)
     published_date = models.DateTimeField(
         blank=True, null=True)
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
+    objects = models.Manager()  # The default manager.
+    published = PublishedManager()  # Our custom manager.
+
 
     def __str__(self):
         return self.title
 
-
     def get_absolute_url(self):
         return reverse('blog:post_detail',
-                       args=[self.published_date])
+                       args=[self.publish.year,
+                             self.publish.month,
+                             self.publish.day,
+                             self.slug])
