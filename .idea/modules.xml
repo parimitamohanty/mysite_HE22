@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/MISF/2500/my-first-blog-master/my-first-blog-master/djangogirls/.idea/djangogirls.iml" filepath="$USER_HOME$/Desktop/MISF/2500/my-first-blog-master/my-first-blog-master/djangogirls/.idea/djangogirls.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mysite_HE.iml" filepath="$PROJECT_DIR$/.idea/mysite_HE.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/parimita/.idea/parimita.iml" filepath="$USER_HOME$/Desktop/parimita/.idea/parimita.iml" />
     </modules>
   </component>
 </project>
